@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-6 py-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header text-white bg-dark text-center">
+          Tính Tiền Lương
+        </div>
+        <div class="card-body">
+          <form>
+            <p>Tên Nhân Viên :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputName" placeholder="Tên Nhân Viên">
+            </div>
+            <p>Tổng số ngày làm :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputTotal" placeholder="Tổng số ngày làm">
+            </div>
+
+            <button onclick="calcLUONG();" type="button" class="btn btn-danger" id="btnCalc">Tính nào</button>
+            <p id="txtResult"></p>
+          </form>
+
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 py-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header text-white bg-primary text-center">
+          Tính Giá Trị Trung Bình
+        </div>
+        <div class="card-body">
+          <form>
+            <p>Số thứ nhất :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input1" placeholder="Điền số">
+            </div>
+            <p>Số thứ hai :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input2" placeholder="Điền số">
+            </div>
+            <p>Số thứ ba :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input3" placeholder="Điền số">
+            </div>
+            <p>Số thứ tư :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input4" placeholder="Điền số">
+            </div>
+            <p>Số thứ năm :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input5" placeholder="Điền số">
+            </div>
+
+            <button onclick="calcGTTB();" type="button" class="btn btn-danger" id="btnCalcGTTB">Tính nào</button>
+            <p id="txtResultGTTB"></p>
+          </form>
+
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 py-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header text-white bg-info text-center">
+          Quy đổi USD sang VND
+        </div>
+        <div class="card-body">
+          <form>
+            
+            <p>Số tiền USD :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputUSD" placeholder="Số tiền USD">
+            </div>
+
+            <button onclick="calcQuyDoi();" type="button" class="btn btn-danger" id="btnCalc">Tính nào</button>
+            <p id="txtResultQD"></p>
+          </form> 
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 py-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header text-white bg-primary text-center">
+          Tính Diện Tích và Chu Vi
+        </div>
+        <div class="card-body">
+          <form>
+            <p>Chiều Dài :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputChieuDai" placeholder="Chiều Dài">
+            </div>
+            <p>Chiều Rộng :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputChieuRong" placeholder="Chiều Rộng">
+            </div>
+            
+
+            <button onclick="calcDTCV();" type="button" class="btn btn-danger" id="btnCalcGTTB">Tính nào</button>
+            <p id="txtResultDTCV"></p>
+          </form>
+
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 py-5">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header text-white bg-success text-center">
+          Tính tổng 2 ký số
+        </div>
+        <div class="card-body">
+          <form>
+            
+            <p>Số gồm 2 ký số :</p>
+            <div class="form-group">
+              <input type="text" class="form-control" id="inputKS" placeholder="Số 2 ký số">
+            </div>
+
+            <button onclick="calcKS();" type="button" class="btn btn-danger" id="btnCalcKS">Tính nào</button>
+            <p id="txtResultKS"></p>
+          </form> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+  <!-- Main JS -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
